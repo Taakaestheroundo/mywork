@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDE AND SHOW ELEMENTS</title>
+</head>
+<body>
+    
+  <style>
+    /* Optional styling for better visibility */
+    #myDivElement {
+      padding: 20px;
+      background-color: aqua;
+      
+      background-origin: border-box;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+    <p>This is my hide and show element.</p>
+
+    <!-- Element to hide/show -->
+    <div id="targetElement">
+      This is my hide and show element.
+    </div>
+  
+    <button onclick="toggleElement()">click me</button>
+  
+    <script>
+      // Function to hide/show the element
+      function toggleElement() {
+        // Get the element by its id
+        var targetElement = document.getElementById("targetElement");
+  
+        // Check if the element is found
+        if (targetElement) {
+          // Toggle the display property
+          if (targetElement.style.display === "none") {
+            // If currently hidden, show it
+            targetElement.style.display = "block";
+          } else {
+            // If currently visible, hide it
+            targetElement.style.display = "none";
+          }
+        } else {
+          // Log an error if the element is not found
+          console.error("Element with id 'targetElement' not found");
+        }
+      }
+    </script>
+  
+</body>
+</html>
